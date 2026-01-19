@@ -9,24 +9,47 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-The NAND gate is the complement of AND function. Its graphic symbol consists of an AND gate’s graphic symbol followed by a small circle. Here’s the logical representation of the NAND gate.
-
-We start by declaring the module. module, a basic building design unit in Verilog HDL, is a keyword to declare the module’s name. NAND_2 is the identifier. Identifiers are the name of the module. The module command instructs the compiler to create a block containing certain inputs and outputs. The list in parenthesis is known as the port list, it contains the input and output ports. Then we declare other datatypes required in our design as follows.
-
-wire Yd; 
-wire in Verilog represents an electrical connection. It is internal, therefore not mentioned in the port list. Next,
-
-and(Yd, A, B); 
-not(Y, Yd); 
-endmodule; 
-
-Here AND is the operation performed on A, B, to get its output in Yd. Then Yd is passed through an inverter, and the output is obtained in Y. The compiler understands the AND and the NOT operation the same way we do. endmodule terminates the module.
+A half adder is used for simple binary addition of two 1-bit numbers. It uses XOR for sum, AND for carry. It’s a building block for more complex adders (like full adders and ripple-carry adders). 
 
 
 ## How to test
 
-Inputs|Output A|B|Y 0 0 1 0 1 1 1 0 1 1 1 0
+
+You test it by running all possible inputs and checking if the outputs match the expected values. Refer to the truth table of half adder.
+
+
+## External hardware
 
 ## External hardware
 
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+
+NONE
+
+## Pinout
+
+### Inputs
+
+| Pin     | Name |
+|---------|------|
+| ui[0]   | x    |
+| ui[1]   | y    |
+| ui[2]   |      |
+| ui[3]   |      |
+| ui[4]   |      |
+| ui[5]   |      |
+| ui[6]   |      |
+| ui[7]   |      |
+
+### Outputs
+
+| Pin     | Name |
+|---------|------|
+| uo[0]   | S    |
+| uo[1]   | C    |
+| uo[2]   |      |
+| uo[3]   |      |
+| uo[4]   |      |
+| uo[5]   |      |
+| uo[6]   |      |
+| uo[7]   |      |
